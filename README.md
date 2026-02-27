@@ -1,33 +1,26 @@
-# PalindromeCheckerApp
-/*
-* Palindrome Checker App
+/**
+* ==========================================================
+* MAIN CLASS – UseCase4PalindromeCheckerApp
+* ==========================================================
 *
-* Objective:
-* - Design and implement a console-based Java application
-*   to validate whether a given string is a palindrome
-*   under different conditions.
-* - Strengthen core programming fundamentals and
-*   data structure concepts.
+* Use Case 4: Character Array Based Validation
 *
-* ---------------------------------------------------------
-* UC3: Palindrome Check Using String Reverse
-* ---------------------------------------------------------
+* Description:
+* This class validates a palindrome by converting
+* the string into a character array and comparing
+* characters using the two-pointer technique.
 *
-* Goal:
-* - Check whether a string is a palindrome by reversing it.
+* At this stage, the application:
+* - Converts string to char array
+* - Uses start and end pointers
+* - Compares characters efficiently
+* - Displays the result
 *
-* Flow:
-* - Reverse the string using a loop
-* - Compare original and reversed string
-* - Display the result
+* This reduces extra memory usage.
 *
-* Key Concepts Used:
-* - for loop → Iterate characters in reverse order
-* - String Immutability → Strings cannot be modified once created
-* - String Concatenation (+) → Build reversed string step-by-step
-* - equals() Method → Compare string content correctly
-*
-* Data Structure Used:
-* - String
-    */
-- 
+* @author Developer
+* @version 4.0
+  */
+
+
+    
