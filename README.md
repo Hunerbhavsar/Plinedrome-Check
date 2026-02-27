@@ -1,30 +1,33 @@
 # PalindromeCheckerApp
 /*
-* Palindrome Checker Management System – UseCase1
-*
-* Running Procedure:
-* - Save the file
-* - Compile using: javac UseCase1PalindromeCheckerApp.java
-* - Run using: java UseCase1PalindromeCheckerApp
-* - main() executes and displays welcome message & version
-*
-* Project Flow:
-* - Start → main() → Display Message → End
-* - (Future Flow: Menu → Input → Check Palindrome → Result → Exit)
+* Palindrome Checker App
 *
 * Objective:
-* - Build a structured Java application
-* - Understand program startup flow
-* - Practice basic Java structure
+* - Design and implement a console-based Java application
+*   to validate whether a given string is a palindrome
+*   under different conditions.
+* - Strengthen core programming fundamentals and
+*   data structure concepts.
 *
-* Topics Covered:
-* - Class and main() method
-* - JVM execution
-* - Command-line arguments
-* - System.out.println()
-* - Basic program flow
+* ---------------------------------------------------------
+* UC3: Palindrome Check Using String Reverse
+* ---------------------------------------------------------
 *
-* Use Case:
-* - Use Case 1 – Application Entry & Welcome Message
-* - No palindrome logic implemented yet
+* Goal:
+* - Check whether a string is a palindrome by reversing it.
+*
+* Flow:
+* - Reverse the string using a loop
+* - Compare original and reversed string
+* - Display the result
+*
+* Key Concepts Used:
+* - for loop → Iterate characters in reverse order
+* - String Immutability → Strings cannot be modified once created
+* - String Concatenation (+) → Build reversed string step-by-step
+* - equals() Method → Compare string content correctly
+*
+* Data Structure Used:
+* - String
     */
+- 
