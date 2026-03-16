@@ -1,26 +1,25 @@
 /**
-* ==========================================================
-* MAIN CLASS – UseCase4PalindromeCheckerApp
-* ==========================================================
-*
-* Use Case 4: Character Array Based Validation
-*
-* Description:
-* This class validates a palindrome by converting
-* the string into a character array and comparing
-* characters using the two-pointer technique.
-*
-* At this stage, the application:
-* - Converts string to char array
-* - Uses start and end pointers
-* - Compares characters efficiently
-* - Displays the result
-*
-* This reduces extra memory usage.
-*
-* @author Developer
-* @version 4.0
-  */
 
+==========================================================
+MAIN CLASS – UseCase6PalindromeCheckerApp
+==========================================================
 
-    
+Use Case 6: Queue + Stack Based Palindrome Check
+
+Description:
+This class demonstrates palindrome validation using
+two different data structures.
+
+At this stage, the application:
+Enqueues characters into a Queue (FIFO)
+Pushes characters into a Stack (LIFO)
+Dequeues from the queue and pops from the stack
+Compares both characters for palindrome validation
+Displays the result
+
+This helps demonstrate the behavioral difference
+between FIFO and LIFO data structures.
+
+@author Developer
+@version 6.0
+*/
