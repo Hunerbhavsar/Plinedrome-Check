@@ -1,29 +1,67 @@
 import java.util.Scanner;
 import java.util.Stack;
 
-public class UseCase5PalindromeCheckerApp {
+/**
 
-    public static void main(String[] args) {
+==========================================================
+MAIN CLASS – UseCase11PalindromeCheckerApp
+==========================================================
 
-        Scanner scanner = new Scanner(System.in);
+Use Case 11: Object-Oriented Palindrome Service
+
+Description:
+This class demonstrates palindrome validation using
+Object-Oriented principles. The palindrome logic is
+encapsulated inside a service class called
+PalindromeChecker.
+
+Concepts Used:
+- Encapsulation
+- Single Responsibility Principle
+
+@author Developer
+@version 11.0
+*/
+
+// Service class that handles palindrome checking
+class PalindromeChecker {
+
+    // Method to check palindrome
+    public boolean checkPalindrome(String input) {
+
         Stack<Character> stack = new Stack<>();
 
-        System.out.print("Enter a string to check palindrome: ");
-        String input = scanner.nextLine();
-
-        // Push all characters into stack
-        for (int i = 0; i < input.length(); i++) {
-            stack.push(input.charAt(i));
+        // Push characters to stack
+        for (char ch : input.toCharArray()) {
+            stack.push(ch);
         }
 
-        // Pop characters to create reversed string
+        // Build reversed string using stack
         String reversed = "";
         while (!stack.isEmpty()) {
             reversed += stack.pop();
         }
 
-        // Compare original and reversed string
-        if (input.equals(reversed)) {
+        // Compare original and reversed
+        return input.equals(reversed);
+    }
+}
+
+public class UseCase11PalindromeCheckerApp {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        // Create service object
+        PalindromeChecker checker = new PalindromeChecker();
+
+        boolean result = checker.checkPalindrome(input);
+
+        if (result) {
             System.out.println("The given string is a Palindrome.");
         } else {
             System.out.println("The given string is NOT a Palindrome.");
