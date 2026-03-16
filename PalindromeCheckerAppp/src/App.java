@@ -1,29 +1,62 @@
 import java.util.Scanner;
-import java.util.Stack;
 
-public class UseCase5PalindromeCheckerApp {
+/**
 
+==========================================================
+MAIN CLASS – UseCase10PalindromeCheckerApp
+==========================================================
+
+Use Case 10: Normalized Palindrome Validation
+
+Description:
+This class validates a palindrome after preprocessing
+the input string.
+
+Normalization includes:
+- Removing spaces and symbols
+- Converting to lowercase
+
+This ensures the palindrome check is logical rather
+than character-format dependent.
+
+Example:
+"A man a plan a canal Panama"
+
+@author Developer
+@version 10.0
+*/
+
+public class UseCase10PalindromeCheckerApp {
+
+    /**
+     * Application entry point for UC10.
+     *
+     * @param args Command-line arguments
+     */
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        Stack<Character> stack = new Stack<>();
 
-        System.out.print("Enter a string to check palindrome: ");
+        System.out.print("Enter a string: ");
         String input = scanner.nextLine();
 
-        // Push all characters into stack
-        for (int i = 0; i < input.length(); i++) {
-            stack.push(input.charAt(i));
+        // Normalize the string: remove non-alphanumeric and convert to lowercase
+        String normalized = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+
+        boolean isPalindrome = true;
+
+        // Compare characters from both ends
+        for (int i = 0; i < normalized.length() / 2; i++) {
+
+            // Compare symmetric characters
+            if (normalized.charAt(i) != normalized.charAt(normalized.length() - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
         }
 
-        // Pop characters to create reversed string
-        String reversed = "";
-        while (!stack.isEmpty()) {
-            reversed += stack.pop();
-        }
-
-        // Compare original and reversed string
-        if (input.equals(reversed)) {
+        // Display result
+        if (isPalindrome) {
             System.out.println("The given string is a Palindrome.");
         } else {
             System.out.println("The given string is NOT a Palindrome.");
